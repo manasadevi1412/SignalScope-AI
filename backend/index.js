@@ -5,6 +5,12 @@ const app = express();
 app.use(cors());
 app.use(express.json());
 
+// Root Route
+app.get("/", (req, res) => {
+  res.send("SignalScope AI Backend is Running 🚀");
+});
+
+// Prediction API
 app.post("/api/predict-signal", async (req, res) => {
   try {
     const { location, network } = req.body;
