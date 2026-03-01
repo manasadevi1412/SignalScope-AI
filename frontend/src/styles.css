@@ -1,0 +1,281 @@
+/* ===============================
+   GLOBAL
+================================= */
+
+body {
+  margin: 0;
+  font-family: "Segoe UI", sans-serif;
+  background-color: #0b0b0b;
+  color: #ffffff;
+  overflow-x: hidden;
+}
+
+/* ===============================
+   NAVBAR
+================================= */
+
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  padding: 20px 40px;
+  background-color: #0b0b0b;
+}
+
+.logo {
+  color: #00ff7f;
+  font-size: 26px;
+  font-weight: bold;
+  letter-spacing: 2px;
+}
+
+.nav-links span {
+  margin-left: 20px;
+  cursor: pointer;
+  color: #ffffff;
+  transition: 0.3s ease;
+}
+
+.nav-links span:hover {
+  color: #ffae00;
+}
+
+/* ===============================
+   HERO PAGE
+================================= */
+
+.hero {
+  height: 100vh;
+
+  background-image:
+    linear-gradient(
+      rgba(0, 0, 0, 0.75),
+      rgba(0, 0, 0, 0.85)
+    ),
+    url("./assets/hero-bg.jpg");
+
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+
+  animation: fadeHero 1s ease forwards;
+}
+
+@keyframes fadeHero {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+.hero h1 {
+  font-size: 80px;
+  font-weight: 800;
+  color: #00ff7f;
+  letter-spacing: 3px;
+  text-shadow: 0 0 20px #00ff7f;
+}
+
+.hero p {
+  font-size: 20px;
+  color: #ffae00;
+  margin-top: 15px;
+  max-width: 700px;
+}
+
+.hero button {
+  margin-top: 35px;
+  padding: 15px 36px;
+  font-size: 16px;
+  font-weight: bold;
+  background-color: #00ff7f;
+  color: #0b0b0b;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.hero button:hover {
+  background-color: #ffae00;
+  transform: scale(1.05);
+  box-shadow: 0 0 15px #ffae00;
+}
+
+/* ===============================
+   COVERAGE PAGE (WITH IMAGE)
+================================= */
+
+.coverage {
+  min-height: 100vh;
+  padding: 60px;
+  text-align: center;
+  color: white;
+
+  background-image:
+    linear-gradient(
+      rgba(0, 0, 0, 0.65),
+      rgba(0, 0, 0, 0.75)
+    ),
+    url("./assets/coverage-bg.jpg");
+
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.coverage h2 {
+  color: #00ff7f;
+  font-size: 34px;
+  margin-bottom: 30px;
+}
+
+/* ===============================
+   INPUTS & SELECT
+================================= */
+
+.coverage input,
+.coverage select {
+  padding: 12px;
+  margin: 10px;
+  width: 260px;
+  background: #1a1a1a;
+  border: 1px solid #444;
+  color: white;
+  border-radius: 6px;
+  transition: 0.3s ease;
+}
+
+.coverage input:focus,
+.coverage select:focus {
+  outline: none;
+  border: 1px solid #00ff7f;
+  box-shadow: 0 0 10px #00ff7f;
+}
+
+/* ===============================
+   BUTTONS
+================================= */
+
+.coverage button {
+  padding: 12px 30px;
+  margin: 15px;
+  background: #00ff7f;
+  color: #0b0b0b;
+  border: none;
+  border-radius: 6px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.coverage button:hover {
+  background: #ffae00;
+  transform: scale(1.05);
+  box-shadow: 0 0 15px #ffae00;
+}
+
+/* ===============================
+   RESULT CARD
+================================= */
+
+.result {
+  margin-top: 30px;
+  padding: 20px;
+  border-radius: 10px;
+  animation: fadeSlide 0.4s ease forwards;
+  backdrop-filter: blur(6px);
+}
+
+.green {
+  border: 2px solid #00ff7f;
+  color: #00ff7f;
+}
+
+.orange {
+  border: 2px solid #ffae00;
+  color: #ffae00;
+}
+
+.red {
+  border: 2px solid #ff3b3b;
+  color: #ff3b3b;
+}
+
+@keyframes fadeSlide {
+  from {
+    opacity: 0;
+    transform: translateY(25px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* ===============================
+   LOADING ANIMATION
+================================= */
+
+.loading {
+  color: #ffae00;
+  font-size: 18px;
+  margin-top: 15px;
+}
+
+.loading span {
+  animation: blink 1.4s infinite both;
+}
+
+.loading span:nth-child(2) {
+  animation-delay: 0.2s;
+}
+
+.loading span:nth-child(3) {
+  animation-delay: 0.4s;
+}
+
+@keyframes blink {
+  0% { opacity: 0.2; }
+  20% { opacity: 1; }
+  100% { opacity: 0.2; }
+}
+
+/* ===============================
+   FOOTER
+================================= */
+
+.footer {
+  text-align: center;
+  padding: 20px;
+  font-size: 14px;
+  color: #777;
+  background-color: #0b0b0b;
+}
+/* 🔥 Mobile Responsive */
+@media (max-width: 768px) {
+
+  .coverage input,
+  .coverage select,
+  .coverage button {
+    width: 100%;
+    margin-bottom: 12px;
+  }
+
+  .coverage {
+    padding: 20px;
+  }
+
+  .result {
+    width: 100%;
+    font-size: 14px;
+  }
+
+  .leaflet-container {
+    height: 350px !important;
+  }
+
+}
