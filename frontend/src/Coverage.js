@@ -76,9 +76,9 @@ function Coverage() {
 
   try {
     const response = await axios.post(
-      "http://localhost:5000/api/predict-signal",
-      { location, network }
-    );
+  "https://signalscope-ai.onrender.com/api/predict-signal",
+  { location, network }
+);
 
     setResult(response.data);
 
